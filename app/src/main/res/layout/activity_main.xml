@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:weightSum="1"
+  tools:context=".ui.MainActivity">
+
+  <FrameLayout
+    android:id="@+id/videoSurfaceContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0.7">
+
+    <SurfaceView
+      android:id="@+id/videoview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+    <ProgressBar
+      android:id="@+id/progressBar_cyclic"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:minWidth="50dp"
+      android:minHeight="50dp"
+      android:visibility="gone" />
+
+
+  </FrameLayout>
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_video_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0.3" />
+
+</LinearLayout>
